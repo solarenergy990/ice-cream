@@ -4,7 +4,7 @@
   height: 502px;
 
   background: $hero-background-color;
-  @media screen and (width: 768px) {
+  @media screen and (min-width: 768px) {
     height: 400px;
   }
   @media screen and (min-width: 1280px) {
@@ -176,6 +176,13 @@
     left: 218px;
     font-size: 14px;
     line-height: 1.43;
+  }
+}
+
+.icon-arrow2 {
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-top: 7px;
   }
 }
 
