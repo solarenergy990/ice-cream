@@ -179,11 +179,20 @@
   }
 }
 
-.icon-arrow2 {
+.link-icon-arrow2 {
   @media screen and (min-width: 768px) {
     display: block;
     margin-top: 7px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    @include flex;
+    background-color: #ffffff;
   }
+}
+
+.icon-arrow2 {
+  fill: #d41443;
 }
 
 .hero-container-advantage {
