@@ -117,20 +117,21 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/burger-menu.js":[function(require,module,exports) {
-(function () {
-  var refs = {
-    openModalBtn: document.querySelector('[data-menu-open]'),
-    closeModalBtn: document.querySelector('[data-menu-close]'),
-    modal: document.querySelector('[data-menu]')
-  };
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+})({"js/scroll.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $("#menu").on("click", "a", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault(); //забираем идентификатор бока с атрибута href
 
-  function toggleModal() {
-    refs.modal.classList.toggle('menu--is-hidden');
-  }
-})();
+    var id = $(this).attr('href'),
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+    top = $(id).offset().top; //анимируем переход на расстояние - top за 1500 мс
+
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -335,5 +336,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/burger-menu.js"], null)
-//# sourceMappingURL=/burger-menu.0e85a309.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/scroll.js"], null)
+//# sourceMappingURL=/scroll.1c6e0918.js.map

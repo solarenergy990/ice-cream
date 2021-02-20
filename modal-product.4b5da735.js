@@ -117,18 +117,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/burger-menu.js":[function(require,module,exports) {
+})({"js/modal-product.js":[function(require,module,exports) {
 (function () {
   var refs = {
-    openModalBtn: document.querySelector('[data-menu-open]'),
-    closeModalBtn: document.querySelector('[data-menu-close]'),
-    modal: document.querySelector('[data-menu]')
+    openModalBtn: document.querySelector('[cream-modal-open]'),
+    closeModalBtn: document.querySelector('[cream-modal-close]'),
+    modal: document.querySelector('[cream-modal]')
   };
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle('menu--is-hidden');
+    refs.modal.classList.toggle('hidden');
   }
 })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -335,5 +335,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/burger-menu.js"], null)
-//# sourceMappingURL=/burger-menu.0e85a309.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal-product.js"], null)
+//# sourceMappingURL=/modal-product.4b5da735.js.map
