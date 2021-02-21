@@ -48,8 +48,13 @@
     background-image: url(../images/about/bg1desktop.png);
     background-size: contain;
     background-repeat: no-repeat;
-    // background-position: 0px 120px;
     background-position: center;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/about/bg2desktop@2x.png);
+    }
 
     .background-container {
       background-image: url(../images/about/home-pic1-1desktop.png);
@@ -60,8 +65,7 @@
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-        background-image: url(../images/about/bg2desktop@2x.png),
-          url(../images/about/home-pic2-1desktop@2x.png);
+        background-image: url(../images/about/home-pic2-1desktop@2x.png);
       }
     }
   }
@@ -86,7 +90,6 @@
 }
 
 .about-container {
-  // max-width: 220px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -217,7 +220,7 @@
   }
 
   @media screen and (min-width: 1280px) {
-    padding-top: 80px;
+    padding-top: 40px;
     // padding-right: 30px;
   }
 }
@@ -238,10 +241,34 @@
     0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
 
-  background-image: url(../images/about/cow-280.png);
+  background-image: linear-gradient(
+      rgba(255, 245, 246, 0.466),
+      rgba(255, 245, 246, 0.466)
+    ),
+    url(../images/about/cow-280.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  .article-container {
+    max-width: 250px;
+
+    @media screen and (min-width: 320px) {
+      max-width: 250px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      max-width: 350px;
+    }
+  }
+
+  .about-article {
+    color: #2f303a;
+  }
+
+  .about-text:last-child {
+    margin-bottom: 0;
+  }
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -260,7 +287,11 @@
     padding: 35px 30px 15px 30px;
     border-radius: 10px;
 
-    background-image: url(../images/about/1tablet-cow-340.png);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url(../images/about/1tablet-cow-340.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -276,8 +307,11 @@
     max-width: 650px;
     padding: 35px 35px 15px 35px;
     border-radius: 12px;
-    // margin-left: auto;
-    background-image: url(../images/about/home-pic1-1desktop.png);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url(../images/about/home-pic1-1desktop.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
