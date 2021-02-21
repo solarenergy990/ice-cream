@@ -209,7 +209,8 @@
   border-radius: 50%;
 }
 
-.hero-arrow-link:hover {
+.hero-arrow-link:hover,
+.hero-arrow-link:focus {
   transform: rotateZ(360deg);
   transition: transform 350ms ease-in-out;
 }
