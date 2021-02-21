@@ -90,10 +90,57 @@
       padding-left: 44px;
     }
 
+    &::before {
+      content: '';
+      display: block;
+      justify-content: center;
+      position: absolute;
+      top: -25%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 249px;
+      height: 252px;
+      //   margin-bottom: 22px;
+      background-image: url('../images/products/ice-cream.png');
+      background-size: 249px 252px;
+
+      @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+        screen and (min-resolution: 192dpi) and (min-width: 320px),
+        screen and (min-resolution: 2dppx) and (min-width: 320px) {
+        background-image: url('../images/products/ice-cream@2x.png');
+      }
+      @media screen and (min-width: 768px) {
+        top: -110px;
+        right: -5px;
+        background-image: url('../images/products/ice-cream-table.png');
+        background-size: 220px 233px;
+        width: 220px;
+        height: 233px;
+        @media screen and (min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+          background-image: url('../images/products/ice-cream-table@2x.png');
+        }
+      }
+      @media screen and (min-width: 1280px) {
+        top: -200px;
+        background-image: url('../images/products/ice-cream-desk.png');
+        background-size: 335px 335px;
+        width: 335px;
+        height: 335px;
+        @media screen and (min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+          background-image: url('../images/products/ice-cream-desk@2x.png');
+        }
+      }
+    }
+
     &:nth-child(2) {
       background-color: #f0d1a5;
 
-      .product-title::before {
+      &::before {
         content: '';
 
         width: 249px;
@@ -135,7 +182,7 @@
     &:nth-child(3) {
       background-color: #c2e297;
 
-      .product-title::before {
+      &::before {
         content: '';
 
         width: 249px;
@@ -205,69 +252,38 @@
 
     color: #ffffff;
 
-    &::before {
-      content: '';
-      display: block;
-      justify-content: center;
-      position: absolute;
-      top: -25%;
-      left: 50%;
-      transform: translateX(-50%);
-
-      width: 249px;
-      height: 252px;
-      //   margin-bottom: 22px;
-      background-image: url('../images/products/ice-cream.png');
-      background-size: 249px 252px;
-
-      @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
-        screen and (min-resolution: 192dpi) and (min-width: 320px),
-        screen and (min-resolution: 2dppx) and (min-width: 320px) {
-        background-image: url('../images/products/ice-cream@2x.png');
-      }
-      @media screen and (min-width: 768px) {
-        top: -110px;
-        right: -5px;
-        background-image: url('../images/products/ice-cream-table.png');
-        background-size: 220px 233px;
-        width: 220px;
-        height: 233px;
-        @media screen and (min-device-pixel-ratio: 2),
-          screen and (min-resolution: 192dpi),
-          screen and (min-resolution: 2dppx) {
-          background-image: url('../images/products/ice-cream-table@2x.png');
-        }
-      }
-      @media screen and (min-width: 1280px) {
-        top: -200px;
-        background-image: url('../images/products/ice-cream-desk.png');
-        background-size: 335px 335px;
-        width: 335px;
-        height: 335px;
-        @media screen and (min-device-pixel-ratio: 2),
-          screen and (min-resolution: 192dpi),
-          screen and (min-resolution: 2dppx) {
-          background-image: url('../images/products/ice-cream-desk@2x.png');
-        }
-      }
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      margin: 0 auto;
-      margin-top: 30px;
-      width: 26px;
-      height: 6px;
-
-      background-image: url('../images/products/group.svg');
-    }
-
     @media screen and (min-width: 1280px) {
       font-size: 30px;
       line-height: 1.13;
     }
   }
+  .dot {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .dot,
+  .dot::before,
+  .dot::after {
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  .dot::before,
+  .dot::after {
+    content: '';
+    position: absolute;
+  }
+  .dot::before {
+    left: 10px;
+  }
+  .dot::after {
+    right: 10px;
+  }
+
   .product-text {
     display: block;
     margin: 0 auto;
@@ -310,15 +326,15 @@
     border: none;
     cursor: pointer;
     outline: transparent;
+    transition: transform 350ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      transform: rotate(360deg);
+    }
 
     img {
       border-radius: inherit;
-      transition: transform 350ms ease-in-out;
-
-      &:hover,
-      &:focus {
-        transform: rotate(360deg);
-      }
     }
   }
 }
