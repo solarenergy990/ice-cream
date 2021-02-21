@@ -1,5 +1,4 @@
 .hero {
-  // height: 665px;
   width: 100%;
   height: 502px;
 
@@ -46,7 +45,7 @@
 .hero-container-button {
   display: inline-flex;
   @media screen and (min-width: 768px) {
-    margin-bottom: 66px;
+    margin-bottom: 58px;
   }
   @media screen and (min-width: 1280px) {
     margin-bottom: unset;
@@ -66,26 +65,21 @@
 .hero-title {
   margin-bottom: 19px;
   font-family: Titan One;
-  font-weight: normal;
-  font-size: 26px;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
+  @include font(500, 26px, 1.15, 0.04em);
   text-transform: uppercase;
 
   color: #ffffff;
   @media screen and (min-width: 768px) {
-    // margin-top: 0;
     padding-top: 102px;
 
     font-size: 22px;
     line-height: 1.14;
   }
   @media screen and (min-width: 1280px) {
-    padding-top: 170px;
-    font-size: 38px;
-    line-height: 1.16;
-    letter-spacing: 0.04em;
     width: 277px;
+
+    padding-top: 170px;
+    @include font-shs(38px, 1.16, 0.04);
 
     animation-name: hero-title;
     animation-duration: 1000ms;
@@ -117,9 +111,7 @@
     font-size: 34px;
   }
   @media screen and (min-width: 1280px) {
-    font-size: 58px;
-    line-height: 0.9;
-    letter-spacing: 0.04em;
+    @include font-shs(58px, 0.9, 0.04);
   }
 }
 
@@ -180,7 +172,6 @@
 
     width: 114px;
     margin-left: 120px;
-    padding-bottom: 60px;
     font-family: DM Sans;
     font-weight: normal;
     font-size: 8px;
@@ -203,10 +194,15 @@
   display: block;
   background-color: #ffffff;
   @include flex;
-  margin-top: 20px;
-  width: 26px;
-  height: 26px;
+  margin-top: 7px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
+  @media screen and (min-width: 1280px) {
+    width: 26px;
+    height: 26px;
+    margin-top: 20px;
+  }
 }
 
 .hero-arrow-link:hover,
@@ -217,6 +213,10 @@
 
 .hero-arrow-icon {
   fill: #d41443;
+  @media screen and (min-width: 1280px) {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 .hero-container-advantage {
@@ -244,10 +244,8 @@
     display: block;
     font-family: Titan One;
     right: 7px;
-    font-size: 28px;
-    line-height: 1.14;
     text-align: right;
-    letter-spacing: 0.04em;
+    @include font-shs(28px, 1.14, 0.04em);
     text-transform: uppercase;
 
     color: #d41443;
@@ -255,7 +253,6 @@
   @media screen and (min-width: 1280px) {
     font-size: 46px;
     line-height: 1.3;
-    // margin-top: 68px;
   }
 }
 
@@ -284,9 +281,7 @@
   @media screen and (min-width: 768px) {
     display: block;
     font-family: DM Sans;
-    font-weight: normal;
-    font-size: 8px;
-    line-height: 1.25;
+    @include font(500, 8px, 1.25, unset);
     text-align: right;
 
     color: #ffffff;
