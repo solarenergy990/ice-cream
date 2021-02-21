@@ -241,6 +241,10 @@
   pointer-events: none;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .modal-about {
   width: 100%;
 
