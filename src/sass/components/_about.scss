@@ -7,19 +7,30 @@
   margin-right: auto;
   background-color: $sec-background-color;
 
+  @media screen and (max-width: 480px) {
+    background-image: url(../images/about/bg1mobile-320.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 630px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/about/bg2mobile@2x.png);
+    }
+  }
+
   @media screen and (max-width: 767px) {
     .background-container {
-      background-image: url(../images/about/bg1mobile-320.png),
-        url(../images/about/cow-280.png);
-      background-size: contain, 280px;
+      background-image: url(../images/about/cow-280.png);
+      background-size: 280px;
       background-repeat: no-repeat;
-      background-position: 0px 510px, 20px 133px;
+      background-position: 20px 133px;
 
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-        background-image: url(../images/about/bg2mobile@2x.png),
-          url(../images/about/cow-280@2x.png);
+        background-image: url(../images/about/cow-280@2x.png);
       }
     }
   }
