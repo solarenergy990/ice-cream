@@ -4,11 +4,20 @@
   padding-top: 80px;
   padding-bottom: 170px;
 
+  @media screen and (min-width: 480px) {
+    padding-top: 200px;
+  }
+
   @media screen and (min-width: 768px) {
     @include font(500, 14px, 2.14, 0.04em);
-    padding-top: 120px;
+    padding-top: 140px;
     padding-bottom: 200px;
   }
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 220px;
+  }
+
   @media screen and (min-width: 1280px) {
     @include font(500, 16px, 1.88, 0.04em);
     padding-top: 120px;
