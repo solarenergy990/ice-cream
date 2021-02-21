@@ -91,3 +91,7 @@
       @include font-shs(58px,1.14,0.06em);
   }
 }
+
+body.modal-open{
+  overflow: hidden;
+}
