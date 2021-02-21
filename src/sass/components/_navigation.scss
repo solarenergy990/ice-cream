@@ -46,6 +46,8 @@
 }
 
 .burger-menu {
+  position: relative;
+  z-index: 6;
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -56,10 +58,10 @@
   }
 }
 
-.button-close {
+.burger-menu.is-open {
   position: absolute;
-  top: 23px;
-  right: 28px;
+  top: 20px;
+  right: 20px;
 }
 
 .menu-nav {
@@ -97,4 +99,52 @@
   &:focus::after {
     opacity: 1;
   }
+}
+
+.link-current {
+  color: #d41443;
+}
+
+.ham {
+  cursor: pointer;
+  transition: transform 400ms linear 800ms;
+  user-select: none;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #d41443;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.burger-menu.is-open .line {
+  stroke: #ffffff;
+}
+
+.ham6 .top {
+  stroke-dasharray: 40 172;
+}
+.ham6 .middle {
+  stroke-dasharray: 40 111;
+}
+.ham6 .bottom {
+  stroke-dasharray: 40 172;
+}
+.ham6.active .top {
+  stroke-dashoffset: -132px;
+}
+.ham6.active .middle {
+  stroke-dashoffset: -71px;
+}
+.ham6.active .bottom {
+  stroke-dashoffset: -132px;
 }
