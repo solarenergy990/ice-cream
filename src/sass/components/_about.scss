@@ -206,7 +206,7 @@
 }
 
 .backdrop-about {
-  z-index: 3;
+  z-index: 6;
   position: fixed;
   top: 0;
   left: 0;
@@ -257,6 +257,7 @@ body.modal-open {
   border-radius: 4px;
 
   background-image: linear-gradient(
+      to right,
       rgba(255, 245, 246, 0.466),
       rgba(255, 245, 246, 0.466)
     ),
@@ -282,13 +283,18 @@ body.modal-open {
   }
 
   .about-text:last-child {
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: url(../images/about/cow-280@2x.png);
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url(../images/about/cow-280@2x.png);
   }
 
   @media screen and (min-width: 480px) {
@@ -314,7 +320,12 @@ body.modal-open {
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../images/about/1tablet-cow2@2x-680.png);
+      background-image: linear-gradient(
+          to right,
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url(../images/about/1tablet-cow2@2x-680.png);
     }
   }
 
@@ -334,7 +345,12 @@ body.modal-open {
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../images/about/1tablet-cow2@2x-680.png);
+      background-image: linear-gradient(
+          to right,
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url(../images/about/1tablet-cow2@2x-680.png);
     }
   }
 }
