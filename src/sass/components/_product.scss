@@ -18,14 +18,14 @@
   }
 
   .product-label {
-    font-family: Titan One;
+    font-family: $sec-font-family;
     font-size: 18px;
     line-height: 1.16;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 15px;
 
-    color: #ffa5ba;
+    color: $sub-title-color;
 
     @media screen and (min-width: 768px) {
       font-size: 26px;
@@ -35,7 +35,7 @@
     }
   }
   .products-title {
-    font-family: Titan One;
+    font-family: $sec-font-family;
     font-size: 34px;
     line-height: 1.14;
     text-align: center;
@@ -43,7 +43,7 @@
     text-transform: uppercase;
     margin-bottom: 144px;
 
-    color: #d41443;
+    color: $accent-color;
 
     @media screen and (min-width: 768px) {
       font-size: 48px;
