@@ -2566,6 +2566,9 @@ body.modal-open {
   background-color: rgba(0, 0, 0, 0.2);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: opacity;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .backdrop .modal {
   position: relative;
@@ -2577,38 +2580,38 @@ body.modal-open {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   background-color: #ffb8ca;
-  background-image: url("/ice-cream.1ec4dc0b.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(255, 184, 202, 0.4), rgba(255, 184, 202, 0.4)), url("/ice-cream.1ec4dc0b.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px), screen and (min-resolution: 192dpi) and (min-width: 320px), screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .backdrop .modal {
-    background-image: url("/ice-cream@2x.fbf4c41f.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(255, 184, 202, 0.4), rgba(255, 184, 202, 0.4)), url("/ice-cream@2x.fbf4c41f.png");
   }
 }
 @media screen and (min-width: 1280px) {
   .backdrop .modal {
     max-width: 528px;
-    height: 581px;
+    max-height: 581px;
   }
 }
 .backdrop .coffee-modal {
   background-color: #f0d1a5;
-  background-image: url("/ice-coffee.2c3fb82f.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(240, 209, 165, 0.2), rgba(240, 209, 165, 0.2)), url("/ice-coffee.2c3fb82f.png");
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px), screen and (min-resolution: 192dpi) and (min-width: 320px), screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .backdrop .coffee-modal {
-    background-image: url("/ice-coffee@2x.2ad150fe.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(240, 209, 165, 0.2), rgba(240, 209, 165, 0.2)), url("/ice-coffee@2x.2ad150fe.png");
   }
 }
 .backdrop .milkshakes-modal {
   background-color: #c2e297;
-  background-image: url("/milkshakes.1bd539a6.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(194, 226, 151, 0.4), rgba(194, 226, 151, 0.4)), url("/milkshakes.1bd539a6.png");
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px), screen and (min-resolution: 192dpi) and (min-width: 320px), screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .backdrop .milkshakes-modal {
-    background-image: url("/milkshakes@2x.51d47c31.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(194, 226, 151, 0.4), rgba(194, 226, 151, 0.4)), url("/milkshakes@2x.51d47c31.png");
   }
 }
 .backdrop .close-button {
@@ -2624,7 +2627,7 @@ body.modal-open {
   justify-content: center;
   font-size: 24px;
   color: #ffffff;
-  background-color: inherit;
+  background-color: transparent;
   border: none;
   box-sizing: border-box;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -2641,7 +2644,7 @@ body.modal-open {
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   color: #d41443;
 }
 @media screen and (min-width: 768px) {
@@ -2659,10 +2662,14 @@ body.modal-open {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
-  text-shadow: white 1px 1px 0, white -1px -1px 0, white -1px 1px 0, white 1px -1px 0;
   text-align: center;
   letter-spacing: 0.04em;
   color: #414141;
+}
+@media screen and (min-width: 1280px) {
+  .backdrop .product-text {
+    font-size: 16px;
+  }
 }
 .backdrop .button-buy {
   display: flex;
@@ -2689,7 +2696,7 @@ body.modal-open {
 }
 @media screen and (min-width: 1280px) {
   .backdrop .button-buy {
-    margin-top: 140px;
+    margin-top: 50px;
   }
 }
 .backdrop .button-buy::after {
