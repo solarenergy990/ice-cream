@@ -116,6 +116,7 @@
 }
 
 .hero-button-red {
+  @include flex($display: flex, $justify-content: center, $align-items: center);
   width: 62px;
   height: 24px;
   @include font(500, 8px, 1.25, unset);
@@ -142,6 +143,7 @@
 }
 
 .hero-button-white {
+  @include flex($display: flex, $justify-content: center, $align-items: center);
   width: 83px;
   height: 24px;
   @include font(500, 8px, 1.25, unset);
