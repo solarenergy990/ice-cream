@@ -18,6 +18,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 
   @include transition(opacity);
+  @include flex;
 
   .modal {
     position: relative;
@@ -33,7 +34,7 @@
     border-radius: 10px;
     background-color: #ffb8ca;
 
-    background-image: url('../images/products/ice-cream.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(255, 184, 202, 0.4), rgba(255, 184, 202, 0.4)), url('../images/products/ice-cream.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -41,32 +42,32 @@
     @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
       screen and (min-resolution: 192dpi) and (min-width: 320px),
       screen and (min-resolution: 2dppx) and (min-width: 320px) {
-      background-image: url('../images/products/ice-cream@2x.png');
+      background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(255, 184, 202, 0.4), rgba(255, 184, 202, 0.4)), url('../images/products/ice-cream@2x.png');
     }
 
     @media screen and (min-width: 1280px) {
       max-width: 528px;
-      height: 581px;
+      max-height: 581px;
     }
   }
   .coffee-modal {
     background-color: #f0d1a5;
-    background-image: url('../images/products/ice-coffee.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(240, 209, 165, 0.2), rgba(240, 209, 165, 0.2)), url('../images/products/ice-coffee.png');
 
     @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
       screen and (min-resolution: 192dpi) and (min-width: 320px),
       screen and (min-resolution: 2dppx) and (min-width: 320px) {
-      background-image: url('../images/products/ice-coffee@2x.png');
+      background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(240, 209, 165, 0.2), rgba(240, 209, 165, 0.2)), url('../images/products/ice-coffee@2x.png');
     }
   }
   .milkshakes-modal {
     background-color: #c2e297;
-    background-image: url('../images/products/milkshakes.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(194, 226, 151, 0.4), rgba(194, 226, 151, 0.4)), url('../images/products/milkshakes.png');
 
     @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
       screen and (min-resolution: 192dpi) and (min-width: 320px),
       screen and (min-resolution: 2dppx) and (min-width: 320px) {
-      background-image: url('../images/products/milkshakes@2x.png');
+      background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(rgba(194, 226, 151, 0.4), rgba(194, 226, 151, 0.4)), url('../images/products/milkshakes@2x.png');
     }
   }
 
@@ -83,7 +84,7 @@
     justify-content: center;
     font-size: 24px;
     color: #ffffff;
-    background-color: inherit;
+    background-color: transparent;
     border: none;
     box-sizing: border-box;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -103,7 +104,7 @@
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 
     color: $accent-color;
 
@@ -119,13 +120,14 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 1.5;
-    text-shadow: white 1px 1px 0, white -1px -1px 0, white -1px 1px 0,
-      white 1px -1px 0;
-
     text-align: center;
     letter-spacing: 0.04em;
 
     color: #414141;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
+    }
   }
   .button-buy {
     display: flex;
@@ -153,7 +155,7 @@
     }
 
     @media screen and (min-width: 1280px) {
-      margin-top: 140px;
+      margin-top: 50px;
     }
   }
   .button-buy::after {
