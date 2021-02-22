@@ -48,6 +48,8 @@
 .burger-menu {
   position: relative;
   z-index: 6;
+  width: 40px;
+  height: 40px;
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -56,12 +58,6 @@
   @media screen and (min-width: 1280px) {
     display: none;
   }
-}
-
-.burger-menu.is-open {
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
 
 .menu-nav {
@@ -111,11 +107,31 @@
   user-select: none;
 }
 
-.hamRotate.active {
-  transform: rotate(45deg);
-}
-.hamRotate180.active {
-  transform: rotate(180deg);
+.burger-menu.is-open {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  & .hamRotate {
+    transform: rotate(45deg);
+  }
+  & .hamRotate180 {
+    transform: rotate(180deg);
+  }
+
+  & .line {
+    stroke: #ffffff;
+  }
+
+  & .ham6 .top {
+    stroke-dashoffset: -132px;
+  }
+  & .ham6 .middle {
+    stroke-dashoffset: -71px;
+  }
+  & .ham6 .bottom {
+    stroke-dashoffset: -132px;
+  }
 }
 
 .line {
@@ -126,10 +142,6 @@
   stroke-linecap: round;
 }
 
-.burger-menu.is-open .line {
-  stroke: #ffffff;
-}
-
 .ham6 .top {
   stroke-dasharray: 40 172;
 }
@@ -138,13 +150,4 @@
 }
 .ham6 .bottom {
   stroke-dasharray: 40 172;
-}
-.ham6.active .top {
-  stroke-dashoffset: -132px;
-}
-.ham6.active .middle {
-  stroke-dashoffset: -71px;
-}
-.ham6.active .bottom {
-  stroke-dashoffset: -132px;
 }
