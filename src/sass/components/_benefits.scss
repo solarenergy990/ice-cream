@@ -59,6 +59,7 @@
 }
 .benefits-icon {
   margin-bottom: 16px;
+
   @media screen and(min-width: 768px) {
     margin-bottom: 13px;
   }
@@ -69,13 +70,15 @@
 }
 
 .benefits-box {
-  margin: 0 auto;
   position: relative;
+
+  margin: 0 auto;
   padding-bottom: 97px;
   padding-top: 39px;
 
   @media screen and(min-width: 768px) {
     width: 660px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -85,6 +88,7 @@
 
   @media screen and(min-width: 1280px) {
     width: 1050px;
+
     padding-bottom: 139px;
     padding-top: 39px;
   }
