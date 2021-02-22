@@ -120,15 +120,24 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"js/burger-menu.js":[function(require,module,exports) {
 (function () {
   var refs = {
-    openModalBtn: document.querySelector('[data-menu-open]'),
-    closeModalBtn: document.querySelector('[data-menu-close]'),
-    modal: document.querySelector('[data-menu]')
+    openModalBtn: document.querySelector('[burger-menu-open]'),
+    closeModalBtn: document.querySelector('[burger-menu-close]'),
+    closeModalBurger: document.querySelector('[burger-menu-move]'),
+    modal: document.querySelector('[burger-menu]'),
+    burger: document.querySelector('[burger-icon]')
   };
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
     refs.modal.classList.toggle('menu--is-hidden');
+  }
+
+  refs.openModalBtn.addEventListener('click', toggleBurger);
+  refs.closeModalBurger.addEventListener('click', toggleBurger);
+
+  function toggleBurger() {
+    refs.burger.classList.toggle('is-open');
   }
 })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -159,7 +168,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60940" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56465" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

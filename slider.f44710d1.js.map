@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/slider.js"],"names":["$","slick","dots","arrows","autoplay"],"mappings":";AAAAA,EAAE,aAAaC,MAAM,CAAEC,MAAM,EAAMC,QAAQ,EAAOC,UAAU","file":"slider.f44710d1.js","sourceRoot":"..\\src","sourcesContent":["$('.comments').slick({ dots: true, arrows: false, autoplay: true });"]}

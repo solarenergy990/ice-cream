@@ -117,35 +117,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/scroll.js":[function(require,module,exports) {
-$(document).ready(function () {
-  $("#menu").on("click", "a", function (event) {
-    //отменяем стандартную обработку нажатия по ссылке
-    event.preventDefault(); //забираем идентификатор бока с атрибута href
-
-    var id = $(this).attr('href'),
-        //узнаем высоту от начала страницы до блока на который ссылается якорь
-    top = $(id).offset().top; //анимируем переход на расстояние - top за 1500 мс
-
-    $('body,html').animate({
-      scrollTop: top
-    }, 1500);
-  });
-});
-$(document).ready(function () {
-  $("#button").on("click", "a", function (event) {
-    //отменяем стандартную обработку нажатия по ссылке
-    event.preventDefault(); //забираем идентификатор бока с атрибута href
-
-    var id = $(this).attr('href'),
-        //узнаем высоту от начала страницы до блока на который ссылается якорь
-    top = $(id).offset().top; //анимируем переход на расстояние - top за 1500 мс
-
-    $('body,html').animate({
-      scrollTop: top
-    }, 1500);
-  });
-});
+})({"js/button-move.js":[function(require,module,exports) {
+// (() => {
+//   const menuBtnRef = document.querySelector("[data-menu-button]");
+//   const mobileMenuRef = document.querySelector("[data-menu]");
+//   menuBtnRef.addEventListener("click", () => {
+//     const expanded =
+//       menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+//     menuBtnRef.classList.toggle("is-open");
+//     menuBtnRef.setAttribute("aria-expanded", !expanded);
+//     mobileMenuRef.classList.toggle("is-open");
+//   });
+// })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -350,5 +333,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/scroll.js"], null)
-//# sourceMappingURL=/scroll.1c6e0918.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/button-move.js"], null)
+//# sourceMappingURL=/button-move.b99a2401.js.map
