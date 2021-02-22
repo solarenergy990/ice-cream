@@ -1,8 +1,12 @@
-.hidden {
+.backdrop.hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
 }
+
+body.modal-open {
+  overflow: hidden;
+}
+
 .backdrop {
   z-index: 6;
   position: fixed;
