@@ -122,12 +122,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   var refs = {
     openModalBtn: document.querySelector('[cream-modal-open]'),
     closeModalBtn: document.querySelector('[cream-modal-close]'),
+    closeModalCream: document.querySelector('[cream-buy-close]'),
     modal: document.querySelector('[cream-modal]')
   };
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalCream.addEventListener('click', toggleModal);
 
   function toggleModal() {
+    document.body.classList.toggle("modal-open");
     refs.modal.classList.toggle('hidden');
   }
 })();
@@ -136,12 +139,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   var refs = {
     openModalBtn: document.querySelector('[coffee-modal-open]'),
     closeModalBtn: document.querySelector('[coffee-modal-close]'),
+    closeModalCoffee: document.querySelector('[coffee-buy-close]'),
     modal: document.querySelector('[coffee-modal]')
   };
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalCoffee.addEventListener('click', toggleModal);
 
   function toggleModal() {
+    document.body.classList.toggle("modal-open");
     refs.modal.classList.toggle('hidden');
   }
 })();
@@ -150,12 +156,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   var refs = {
     openModalBtn: document.querySelector('[milkshakes-modal-open]'),
     closeModalBtn: document.querySelector('[milkshakes-modal-close]'),
+    closeModalShakes: document.querySelector('[milkshakes-buy-close]'),
     modal: document.querySelector('[milkshakes-modal]')
   };
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalShakes.addEventListener('click', toggleModal);
 
   function toggleModal() {
+    document.body.classList.toggle("modal-open");
     refs.modal.classList.toggle('hidden');
   }
 })();
@@ -187,7 +196,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59761" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57066" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
