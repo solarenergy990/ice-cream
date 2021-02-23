@@ -24,11 +24,11 @@
   pointer-events: none;
 }
 
-.menu-modal {
+.buy-modal {
   position: relative;
   width: 100%;
   transform: scale(1);
-  padding: 20px;
+  padding: 30px;
   background-color: #ffdee7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
     0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -64,14 +64,6 @@
 
   @include transition(transform);
 
-  &-title {
-    margin-bottom: 12px;
-    @include font(700, 20px, 1.5, 0.03em);
-    text-align: center;
-
-    color: #000000;
-  }
-
   .buy--is-hidden & {
     transform: scale(0.8);
     @media screen and (max-width: 767px) {
@@ -86,7 +78,16 @@
   }
 }
 
-.menumodal-button {
+.buy-title {
+  font-family: $sec-font-family;
+  margin-bottom: 12px;
+  @include font(700, 20px, 1.5, 0.03em);
+  text-align: center;
+
+  color: $accent-color;
+}
+
+.buy-button {
   position: absolute;
   top: 8px;
   right: 8px;
