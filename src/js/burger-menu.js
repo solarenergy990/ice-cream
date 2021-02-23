@@ -2,6 +2,7 @@
   const refs = {
     openModalBtn: document.querySelector('[burger-menu-open]'),
     openModalСross: document.querySelector('[burger-menu-cross]'),
+    openModalBtnbuy: document.querySelector('[burger-menu-list]'),
     closeModalBtn: document.querySelector('[burger-menu-close]'),
     closeModalBurger: document.querySelector('[burger-menu-move]'),
     closeModalMenu: document.querySelector('[burger-menu-remove]'),
@@ -27,6 +28,7 @@
   }
 
   refs.openModalBtn.addEventListener('click', toggleButtonbuy);
+  refs.openModalBtnbuy.addEventListener('click', toggleButtonbuy);
   refs.closeModalBtn.addEventListener('click', toggleButtonbuy);
 
   function toggleButtonbuy() {
