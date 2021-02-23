@@ -1,0 +1,199 @@
+/* Модальное окно */
+
+.buy-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding: 93px 15px;
+  background: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  opacity: 1;
+  @include transition(opacity);
+  @media screen and (max-width: 767px) {
+    padding: 93px 15px;
+  }
+  // @media screen and (min-width: 768) {
+  //   padding: 93px 159px;
+  // }
+}
+.buy--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.buy-modal {
+  position: relative;
+  width: 100%;
+  transform: scale(1);
+  padding: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-image: linear-gradient(
+      rgba(255, 245, 246, 0.466),
+      rgba(255, 245, 246, 0.466)
+    ),
+    url('../images/menu-modal/minmobile-modal.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/minmobile-modal@2x.jpg');
+  }
+  @media screen and (min-width: 320px) {
+    position: relative;
+    left: 50%;
+    max-width: 290px;
+    max-height: 760px;
+    transform: translateX(-50%) scale(1);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/minmobile-modal.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/menu-modal/minmobile-modal@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 400px) {
+    position: relative;
+    left: 50%;
+    max-width: 370px;
+    max-height: 810px;
+    transform: translateX(-50%) scale(1);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/mobile-modal.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/menu-modal/mobile-modal@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 560px) {
+    left: 50%;
+    max-width: 430px;
+    max-height: 750px;
+    transform: translate(-50%) scale(1);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/largemobile-modal.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/menu-modal/largemobile-modal@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 768px) {
+    left: 50%;
+    max-width: 480px;
+    max-height: 760px;
+    transform: translate(-50%) scale(1);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/tablet-modal.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/menu-modal/tablet-modal@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 1050px) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    max-width: 528px;
+    max-height: 740px;
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/desktop-modal.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/menu-modal/desktop-modal@2x.jpg');
+    }
+  }
+
+  @include transition(transform);
+
+  .buy--is-hidden & {
+    transform: scale(0.8);
+    @media screen and (max-width: 767px) {
+      transform: translateX(-50%) scale(0.8);
+    }
+    @media screen and (min-width: 768px) {
+      transform: translateX(-50%) scale(0.8);
+    }
+    @media screen and (min-width: 1280px) {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+}
+
+.buy-title {
+  font-family: $sec-font-family;
+  margin-bottom: 12px;
+  @include font(700, 20px, 1.5, 0.03em);
+  text-align: center;
+
+  color: $accent-color;
+}
+
+.buy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  fill: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  @include transition(fill);
+
+  &:hover,
+  &:focus {
+    fill: red;
+  }
+}

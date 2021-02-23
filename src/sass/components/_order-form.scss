@@ -1,0 +1,126 @@
+.form {
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'],
+  textarea,
+  select {
+    display: block;
+    padding: 7px 15px;
+    line-height: 1.5;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    background-clip: padding-box;
+    background-color: #fff4f4;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05),
+      inset 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .form-group:nth-child(1) {
+      input {
+        width: 95%;
+      }
+    }
+  }
+
+  .pt-3 {
+    padding-top: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+
+    label {
+      line-height: 1.7;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-check {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: 1px;
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid;
+  border-color: #000;
+  border-radius: 2px;
+  background-color: transparent;
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  @include transition(background-color, border-color, background-image);
+
+  .checkbox-check:checked + & {
+    background-color: #d41443;
+    background-image: url(../images/check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: #d41443;
+  }
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chekbox-product {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.hero-button-red:disabled {
+  background: transparent;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.hero-button-red:disabled:hover,
+.hero-button-red:disabled:focus {
+  background-color: transparent;
+}

@@ -37,8 +37,27 @@
   <include src="./partials/modal-about.html"></include>
   <include src="./partials/product-modal-coffee.html"></include>
   <include src="./partials/product-modal-milkshakes.html"></include>
+  <include src="./partials/menu-modal.html"></include>
+  <include src="./partials/thank-modal.html"></include>
   <include src="./partials/to-top.html"></include>
   <!-- скрипты команды идут под этим комментарием -->
+  <script src="./js/validation.js"></script>
+  <script src="./js/menu-modal.js"></script>
+  <script src="./js/modal-thanks.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+  <script>
+    function checkParams() {
+      var name = $('#name').val();
+      var email = $('#email').val();
+      var phone = $('#phone').val();
+
+      if (name.length != 0 && email.length >= 6 && phone.length >= 10) {
+        $('#submit').removeAttr('disabled');
+      } else {
+        $('#submit').attr('disabled', 'disabled');
+      }
+    }
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
     crossorigin="anonymous"></script>
