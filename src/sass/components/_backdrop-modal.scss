@@ -15,9 +15,6 @@
   @media screen and (max-width: 767px) {
     padding: 93px 15px;
   }
-  // @media screen and (min-width: 768) {
-  //   padding: 93px 159px;
-  // }
 }
 .buy--is-hidden {
   opacity: 0;
@@ -163,7 +160,7 @@
     @media screen and (min-width: 768px) {
       transform: translateX(-50%) scale(0.8);
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 1050px) {
       transform: translate(-50%, -50%) scale(0.8);
     }
   }
