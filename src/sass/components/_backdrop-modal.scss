@@ -29,37 +29,128 @@
   width: 100%;
   transform: scale(1);
   padding: 30px;
-  background-color: #ffdee7;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
-    0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
   background-image: linear-gradient(
       rgba(255, 245, 246, 0.466),
       rgba(255, 245, 246, 0.466)
     ),
-    url(../images/icecream-bg.png);
-  background-size: contain;
+    url('../images/menu-modal/minmobile-modal.jpg');
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: top;
-  border-radius: 4px;
-  @media screen and (max-width: 767px) {
+  background-size: cover;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/minmobile-modal@2x.jpg');
+  }
+  @media screen and (min-width: 320px) {
     position: relative;
     left: 50%;
-    max-width: 450px;
+    max-width: 290px;
+    max-height: 760px;
     transform: translateX(-50%) scale(1);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/minmobile-modal.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/menu-modal/minmobile-modal@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 400px) {
+    position: relative;
+    left: 50%;
+    max-width: 370px;
+    max-height: 810px;
+    transform: translateX(-50%) scale(1);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/mobile-modal.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/menu-modal/mobile-modal@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 560px) {
+    left: 50%;
+    max-width: 430px;
+    max-height: 750px;
+    transform: translate(-50%) scale(1);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/largemobile-modal.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/menu-modal/largemobile-modal@2x.jpg');
+    }
   }
   @media screen and (min-width: 768px) {
     left: 50%;
-    max-width: 450px;
-    transform: translateX(-50%) scale(1);
+    max-width: 480px;
+    max-height: 760px;
+    transform: translate(-50%) scale(1);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/tablet-modal.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/menu-modal/tablet-modal@2x.jpg');
+    }
   }
-
-  @media screen and (min-width: 1280px) {
-    min-width: 528px;
+  @media screen and (min-width: 1050px) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
+    max-width: 528px;
+    max-height: 740px;
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/menu-modal/desktop-modal.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/menu-modal/desktop-modal@2x.jpg');
+    }
   }
 
   @include transition(transform);

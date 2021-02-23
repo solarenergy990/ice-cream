@@ -37,29 +37,73 @@
       rgba(255, 245, 246, 0.466),
       rgba(255, 245, 246, 0.466)
     ),
-    url(../images/icecream-bg.png);
-  background-size: contain;
+    url(../images/modal-thanks/minmobile-thanks.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   border-radius: 4px;
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 400px) {
     position: relative;
     left: 50%;
-    max-width: 450px;
+    max-width: 370px;
+    max-height: 810px;
     transform: translateX(-50%) scale(1);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/modal-thanks/mobile-thanks.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/modal-thanks/mobile-thanks@2x.jpg');
+    }
   }
   @media screen and (min-width: 768px) {
     left: 50%;
-    max-width: 450px;
+    max-width: 480px;
+    max-height: 760px;
     transform: translate(-50%) scale(1);
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/modal-thanks/tablet-thanks.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/modal-thanks/tablet-thanks@2x.jpg');
+    }
   }
 
-  @media screen and (min-width: 1280px) {
-    position: relative;
-    min-width: 528px;
+  @media screen and (min-width: 1050px) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
+    max-width: 528px;
+    max-height: 740px;
+    background-image: linear-gradient(
+        rgba(255, 245, 246, 0.466),
+        rgba(255, 245, 246, 0.466)
+      ),
+      url('../images/modal-thanks/desktop-thanks.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(255, 245, 246, 0.466),
+          rgba(255, 245, 246, 0.466)
+        ),
+        url('../images/modal-thanks/desktop-thanks@2x.jpg');
+    }
   }
 
   @include transition(transform);
