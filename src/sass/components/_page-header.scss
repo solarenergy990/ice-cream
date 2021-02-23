@@ -53,6 +53,8 @@
     width: 160px;
     margin-left: 30px;
     opacity: 1;
+  }
+  @media screen and (max-width: 1279px) {
     @include transition(opacity);
     &.button--is-hidden {
       opacity: 0;
