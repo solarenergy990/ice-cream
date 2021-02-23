@@ -1,0 +1,107 @@
+/* Модальное окно */
+
+.buy-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding: 93px 15px;
+  background: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  opacity: 1;
+  @include transition(opacity);
+  @media screen and (max-width: 767px) {
+    padding: 93px 15px;
+  }
+  // @media screen and (min-width: 768) {
+  //   padding: 93px 159px;
+  // }
+}
+.buy--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-modal {
+  position: relative;
+  width: 100%;
+  transform: scale(1);
+  padding: 20px;
+  background-color: #ffdee7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+
+  background-image: linear-gradient(
+      rgba(255, 245, 246, 0.466),
+      rgba(255, 245, 246, 0.466)
+    ),
+    url(../images/icecream-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: 4px;
+  @media screen and (max-width: 767px) {
+    position: relative;
+    left: 50%;
+    max-width: 450px;
+    transform: translateX(-50%) scale(1);
+  }
+  @media screen and (min-width: 768px) {
+    left: 50%;
+    max-width: 450px;
+    transform: translateX(-50%) scale(1);
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-width: 528px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @include transition(transform);
+
+  &-title {
+    margin-bottom: 12px;
+    @include font(700, 20px, 1.5, 0.03em);
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .buy--is-hidden & {
+    transform: scale(0.8);
+    @media screen and (max-width: 767px) {
+      transform: translateX(-50%) scale(0.8);
+    }
+    @media screen and (min-width: 768px) {
+      transform: translateX(-50%) scale(0.8);
+    }
+    @media screen and (min-width: 1280px) {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+}
+
+.menumodal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  fill: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  @include transition(fill);
+
+  &:hover,
+  &:focus {
+    fill: red;
+  }
+}
