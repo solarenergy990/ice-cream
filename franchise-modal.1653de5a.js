@@ -117,23 +117,21 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/to-top.js":[function(require,module,exports) {
-jQuery(document).ready(function () {
-  var btn = $('#to-top');
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 400) {
-      btn.addClass('show');
-    } else {
-      btn.removeClass('show');
-    }
-  });
-  btn.on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({
-      scrollTop: 0
-    }, '400');
-  });
-});
+})({"js/franchise-modal.js":[function(require,module,exports) {
+(function () {
+  var refs = {
+    openModalBtn: document.querySelector('[franchise-modal-open]'),
+    closeModalBtn: document.querySelector('[franchise-modal-close]'),
+    modal: document.querySelector('[franchise-modal]')
+  };
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    document.body.classList.toggle('modal-open');
+    refs.modal.classList.toggle('franchise-hidden');
+  }
+})();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -338,5 +336,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/to-top.js"], null)
-//# sourceMappingURL=/to-top.6e4a5150.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/franchise-modal.js"], null)
+//# sourceMappingURL=/franchise-modal.1653de5a.js.map
