@@ -1,3 +1,4 @@
+# Продукт находится в разработке. Спасибо за понимание)
 # parcel-project-template
 
 ## Developing
